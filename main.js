@@ -54,5 +54,8 @@ function sortByPoints(prev,current) {
 
 const mapAuntPoints = getAuntPointsMapper(SEARCH_AUNT);
 
-readFile('input').then(mapAunts).then(aunts => aunts.map(mapAuntPoints)).then(aunts => aunts.sort(sortByPoints))
+readFile('input')
+    .then(mapAunts)
+    .then(aunts => aunts.map(mapAuntPoints))
+    .then(aunts => aunts.sort(sortByPoints))
     .then(sortedAunts => console.log(sortedAunts[0].name));
